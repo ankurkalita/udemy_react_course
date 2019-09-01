@@ -3,14 +3,14 @@ import {Text, View, StyleSheet, FlatList} from 'react-native';
 
 const ListScreen = () =>{
     const friends = [
-        {'name':'friend #1'},
-        {'name':'friend #2'},
-        {'name':'friend #3'},
-        {'name':'friend #4'},
-        {'name':'friend #5'},
-        {'name':'friend #6'},
-        {'name':'friend #7'},
-        {'name':'friend #8'}
+        { 'name': 'friend #1', 'age': '20'},
+        { 'name': 'friend #2', 'age': '30'},
+        { 'name': 'friend #3', 'age': '40'},
+        { 'name': 'friend #4', 'age': '50'},
+        { 'name': 'friend #5', 'age': '60'},
+        { 'name': 'friend #6', 'age': '70'},
+        { 'name': 'friend #7', 'age': '80'},
+        { 'name': 'friend #8', 'age': '90'}
     ];
 
     return (
@@ -18,7 +18,7 @@ const ListScreen = () =>{
        data = {friends}
        keyExtractor = {friend => friend.name }
        renderItem = { ( {item} ) => {
-          return <Text>{item.name}</Text>;
+          return <Text>{item.name} - age {item.age}</Text>;
        }}
     />);
 };
